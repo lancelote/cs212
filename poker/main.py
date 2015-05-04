@@ -105,5 +105,3 @@ def poker(hands):
     Return the best hands: poker([hand, ...]) => [hand, ...]
     """
     return all_max(hands, key=hand_rank)
-
-
