@@ -2,6 +2,9 @@
 ###########
 .idea/
 
+# Python #
+__pycache__/
+
 # Testing #
 ###########
 .coverage
