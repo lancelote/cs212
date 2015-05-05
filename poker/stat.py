@@ -8,13 +8,16 @@ from poker.main import hand_rank
 
 def deal(hands_num, cards_num=5):
     """
-    Creates a given number hands with given number cards in each
+    Creates a given number hands with given number of random cards in each
 
     :param hands_num: number of hands
     :param cards_num: number of cards in hand
     :return: list of hands full of list of cards
     """
-    # ToDo : complete test suit
+    # Check if there are enough cards
+    if hands_num*cards_num > 52:
+        raise IndexError("Not enough cards to fill all hands")
+
     deck = [r+s for r in '23456789TJQKA' for s in 'SHDC']
     random.shuffle(deck)
     return [deck[cards_num*i:cards_num*(i + 1)] for i in range(hands_num)]
@@ -25,7 +28,6 @@ def hand_names(rank):
     :param rank: hand rank
     :return: hand name
     """
-    # ToDo : test suit
     if rank == 8:
         name = "straight flush"
     elif rank == 7:
@@ -47,14 +49,14 @@ def hand_names(rank):
     return name
 
 
-def hand_percentage(hand_num=7*10**5):
+def hand_percentage(hand_num=7*10**5):  # pragma: no cover
     """
     Sample hand_num random hands and print a table of percentages for each type
     of hand
 
     :param hand_num: number of sample hand
     """
-    # ToDo : test suit
+    # ToDo : add test coverage
     counts = [0]*9
     for i in range(int(hand_num/10)):
         for hand in deal(10):

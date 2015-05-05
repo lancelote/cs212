@@ -1,7 +1,7 @@
 """
 Poker game implementation
 """
-# ToDo : royal flush
+# ToDo : royal flush missed
 
 
 def card_ranks(hand):
