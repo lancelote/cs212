@@ -13,11 +13,5 @@ pip install -r requirements.txt
 ## Testing
 
 ```bash
-py.test --cov-report term-missing --cov poker/ test/
-```
-
-## PEP8 accordance
-
-```bash
-pylint poker/ test/
+paver
 ```
