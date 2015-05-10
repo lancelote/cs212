@@ -13,5 +13,6 @@ pip install -r requirements.txt
 ## Testing
 
 ```bash
-paver
+paver <sub_project>
+# ex.: paver poker
 ```

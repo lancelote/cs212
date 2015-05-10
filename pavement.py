@@ -3,17 +3,16 @@ from paver.easy import sh
 
 
 @task
-def unit_tests():
+def poker():
+    # Unit tests
     sh('py.test --cov-report term-missing --cov poker/ test/')
 
-
-@task
-def pylint():
+    # Syntax
     sh('pylint --msg-template="{path}:{line}:[{msg_id}({symbol}), {obj}] {msg}"'
        ' poker/ test/ > pylint.txt')
 
 
-@needs('unit_tests', 'pylint')
+@needs('poker')
 @task
 def default():
     pass
