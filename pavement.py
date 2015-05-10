@@ -5,14 +5,22 @@ from paver.easy import sh
 @task
 def poker():
     # Unit tests
-    sh('py.test --cov-report term-missing --cov poker/ test/')
+    sh('py.test --cov-report term-missing --cov poker/ test/poker/')
 
     # Syntax
-    sh('pylint --msg-template="{path}:{line}:[{msg_id}({symbol}), {obj}] {msg}"'
-       ' poker/ test/ > pylint.txt')
+    sh('pylint poker/ test/poker/')
 
 
-@needs('poker')
+@task
+def zebra():
+    # Unit tests
+    sh('py.test --cov-report term-missing --cov zebra/ test/zebra/')
+
+    # Syntax
+    sh('pylint zebra/ test/zebra/')
+
+
+@needs('poker', 'zebra')
 @task
 def default():
     pass
