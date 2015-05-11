@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lancelote/cs212.svg)](https://travis-ci.org/lancelote/cs212)
+
 # Design of Computer Programs
 ## Description
 
