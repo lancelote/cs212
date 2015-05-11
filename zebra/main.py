@@ -9,7 +9,7 @@ HOUSES = [1, 2, 3, 4, 5]
 ORDERINGS = list(itertools.permutations(HOUSES))
 
 
-def im_right(house1, house2):
+def right(house1, house2):
     """
     Is house 1 immediately right of house 2
     """
@@ -41,7 +41,7 @@ def zebra_puzzle():
                 if spaniard is dog
                 if coffee is green
                 if ukranian is tea
-                if im_right(green, ivory)
+                if right(green, ivory)
                 if old_gold is snails
                 if kools is yellow
                 if milk is middle
