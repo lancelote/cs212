@@ -12,6 +12,10 @@ ORDERINGS = list(itertools.permutations(HOUSES))
 def right(house1, house2):
     """
     Is house 1 immediately right of house 2
+
+    :type house1 int
+    :type house2 int
+    :return bool
     """
     return house1 - house2 == 1
 
@@ -19,13 +23,19 @@ def right(house1, house2):
 def next_to(house1, house2):
     """
     Are houses next to each other
+
+    :type house1 int
+    :type house2 int
+    :return bool
     """
     return abs(house1 - house2) == 1
 
 
 def zebra_puzzle():
     """
-    Return a tuple (water, zebra) indicating their house numbers
+    Solver for zebra puzzle
+
+    :return a tuple (water, zebra) indicating their house numbers
     """
     houses = first, _, middle, _, _ = [1, 2, 3, 4, 5]
     orderings = list(itertools.permutations(houses))
