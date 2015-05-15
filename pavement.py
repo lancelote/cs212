@@ -19,7 +19,7 @@ def zebra():
     # Acceptance tests
     sh('behave test/zebra/acceptance/features/')
 
-    # Syntax
+    # Syntax validation
     sh('pylint zebra/ test/zebra/')
 
 
