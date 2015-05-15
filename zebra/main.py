@@ -64,7 +64,11 @@ def zebra_puzzle():
                   if japanese is parliaments)
     return answer
 
-if __name__ == "__main__":
+
+def main():  # pragma: no cover
+    """
+    Prints the result to console
+    """
     result = zebra_puzzle()
     output = []
 
@@ -92,4 +96,7 @@ if __name__ == "__main__":
     elif result[1] == result[2][4]:
         output.append("Norwegian")
 
-    print("{0} drinks water\n{1} owns the zebra".format(*output))
+    print("{0} drinks water, {1} owns the zebra".format(*output))
+
+if __name__ == "__main__":  # pragma: no cover
+    main()

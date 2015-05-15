@@ -16,6 +16,9 @@ def zebra():
     # Unit tests
     sh('py.test --cov-report term-missing --cov zebra/ test/zebra/')
 
+    # Acceptance tests
+    sh('behave test/zebra/acceptance/features/')
+
     # Syntax
     sh('pylint zebra/ test/zebra/')
 

@@ -33,4 +33,4 @@ class TestImRight(unittest.TestCase):
         self.assertFalse(next_to(2, 4))
 
     def test_zebra_puzzle_solves_the_problem(self):
-        self.assertEqual(zebra_puzzle(), (1, 5))
+        self.assertEqual(zebra_puzzle(), (1, 5, (3, 4, 2, 5, 1)))
