@@ -17,7 +17,7 @@ def step_impl(context):
     context.answer = subprocess.check_output(["python3", "zebra/main.py"])
 
 
-@then('I see a result of "(?P<text>[^"]*)"')
+@then('I see a result of "{text}"')
 def step_impl(context, text):
     """
     Compare captured output to given string
