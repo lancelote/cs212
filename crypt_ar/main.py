@@ -1,8 +1,25 @@
+# Turn off (eval-used) pylint error:
+# pylint: disable=W0123
+
 """
 Cryptarithmetic puzzle solver
 """
 
 import argparse
+import re
+
+
+def valid(formula):
+    """
+    Formula is valid if it has no numbers with leading zero and evals true
+
+    :param formula: string represent a formula
+    :return: True if formula does not raise an error, False otherwise
+    """
+    try:
+        return not re.search(r'\b0[0-9]', formula) and eval(formula) is True
+    except ArithmeticError:
+        return False
 
 
 def solve(task):
@@ -12,6 +29,9 @@ def solve(task):
     :arg task String to solve, ex.: "ODD + ODD == EVEN"
     :type task str
     """
+    table = str.maketrans('ABC', '123')
+    formula = 'A + B == C'
+    # eval(f.translate(table))
     return task
 
 
