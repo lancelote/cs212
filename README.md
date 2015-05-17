@@ -10,12 +10,14 @@ udacity course
 
 - [Poker hands comparison algorithm](poker/main.py)
 - [Poker hands stats calculation](poker/stat.py)
-- [Assignment 1](poker/ps1)
-- [Assignment 2](poker/ps2)
+- [Assignment 1](poker/ps1.py)
+- [Assignment 2](poker/ps2.py)
 
 ### Zebra
 
 - [Zebra puzzle solver](zebra/main.py)
+- [Debug functions](debug/main.py)
+- [Time checker](time_stat/main.py)
 
 ## Package Dependencies
 

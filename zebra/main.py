@@ -67,7 +67,7 @@ def zebra_puzzle():
 
 def main():  # pragma: no cover
     """
-    Prints the result to console
+    Prints the result to a console
     """
     result = zebra_puzzle()
     output = []

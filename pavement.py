@@ -1,3 +1,7 @@
+"""
+Paver tasks
+"""
+
 from paver.tasks import task, needs
 from paver.easy import sh
 
@@ -23,7 +27,18 @@ def zebra():
     sh('pylint zebra/ test/zebra/')
 
 
-@needs('poker', 'zebra')
+@task
+def crypt_ar():
+    # Unit tests
+    sh('py.test --cov-report term-missing --cov crypt_ar/ test/crypt_ar/')
+
+    # Acceptance tests
+    sh('behave test/crypt_ar/acceptance/features/')
+
+    # Syntax validation
+    sh('pylint crypt_ar/ test/crypt_ar/')
+
+@needs('poker', 'zebra', 'crypt_ar')
 @task
 def default():
     pass
