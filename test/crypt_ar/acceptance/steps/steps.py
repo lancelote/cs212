@@ -16,7 +16,7 @@ def step_impl(context, text):
     """
     context.answer = subprocess.check_output(['python3',
                                               'crypt_ar/main.py',
-                                              '"{0}"'.format(text)])
+                                              '{0}'.format(text)])
 
 
 @then('I see a result of "{text}"')

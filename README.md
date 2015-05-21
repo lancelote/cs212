@@ -19,6 +19,10 @@ udacity course
 - [Debug functions](debug/main.py)
 - [Time checker](time_stat/main.py)
 
+## Cryptarithmetic
+
+- [Cryptarithmetic puzzle solver](crypt_ar/main.py)
+
 ## Package Dependencies
 
 ```bash
@@ -30,5 +34,5 @@ pip install -r requirements.txt
 Unit tests (`py.test`), acceptance tests (`behave`) and syntax validation (`pylint`):
 ```bash
 paver <sub_project>
-# ex.: paver zebra
+# poker, zebra, crypt_ar
 ```
