@@ -22,6 +22,4 @@ def step_impl(context, text):
     """
     Compare captured output to given string
     """
-    print(text)
-    print(context.answer.decode("utf-8"))
     assert context.answer.decode("utf-8").strip() == text

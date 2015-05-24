@@ -27,6 +27,11 @@ udacity course
 
 - [Floor puzzle solver](floor/main.py)
 
+## Longest palindrome
+
+Finds the longest palindrome in the given string
+- [Palindrome searcher](long_pal/main.py)
+
 ## Package Dependencies
 
 ```bash
