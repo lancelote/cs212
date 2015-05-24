@@ -23,6 +23,10 @@ udacity course
 
 - [Cryptarithmetic puzzle solver](crypt_ar/main.py)
 
+## Floor puzzle
+
+-[Floor puzzle solver](floor/main.py)
+
 ## Package Dependencies
 
 ```bash
@@ -34,5 +38,5 @@ pip install -r requirements.txt
 Unit tests (`py.test`), acceptance tests (`behave`) and syntax validation (`pylint`):
 ```bash
 paver <sub_project>
-# poker, zebra, crypt_ar
+# poker, zebra, crypt_ar, floor
 ```

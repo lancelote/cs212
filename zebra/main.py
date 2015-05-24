@@ -5,10 +5,6 @@ Zebra puzzle
 import itertools
 
 
-HOUSES = [1, 2, 3, 4, 5]
-ORDERINGS = list(itertools.permutations(HOUSES))
-
-
 def right(house1, house2):
     """
     Is house 1 immediately right of house 2
