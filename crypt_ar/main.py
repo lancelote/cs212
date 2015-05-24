@@ -66,7 +66,7 @@ def compile_formula(formula, verbose=False):
     """
     Compile formula into function. Also returns letters found, as a str, in
     same order as parameters of function. For example, 'YOU == ME**2' returns
-    (lambda: Y, M, E, U, O: (U + 10*O + 100*Y) == (E + 10*M)**2), 'YMEUO'
+    (lambda Y, M, E, U, O: (U + 10*O + 100*Y) == (E + 10*M)**2), 'YMEUO'
     """
     letters = "".join(set(char for char in formula if char in ascii_uppercase))
     first_letters = set(re.findall(r'\b([A-Z])[A-Z]', formula))
@@ -80,7 +80,7 @@ def compile_formula(formula, verbose=False):
         body = '{0} and ({1})'.format(tests, body)
 
     func = 'lambda {0}: {1}'.format(params, body)
-    if verbose:
+    if verbose:  # pragma: no cover
         print(func)
     return eval(func), letters
 

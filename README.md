@@ -5,7 +5,7 @@
 Code for [Design of Computer Programs](https://www.udacity.com/course/cs212) 
 udacity course
 
-## Projects Description
+## Projects
 ### Poker
 
 - [Poker hands comparison algorithm](poker/main.py)
@@ -25,7 +25,7 @@ udacity course
 
 ## Floor puzzle
 
--[Floor puzzle solver](floor/main.py)
+- [Floor puzzle solver](floor/main.py)
 
 ## Package Dependencies
 

@@ -3,7 +3,7 @@
 # pylint: disable=R0902,C0103,C0111
 
 import unittest
-from crypt_ar.main import valid, fill_in, compile_word
+from crypt_ar.main import valid, fill_in, compile_word, compile_formula
 
 
 class TestSolve(unittest.TestCase):
@@ -39,3 +39,17 @@ class TestCompileWord(unittest.TestCase):
 
     def test_compile_word_does_not_change_none_letters(self):
         self.assertEqual(compile_word('=='), '==')
+
+
+class TestCompileFormula(unittest.TestCase):
+
+    def setUp(self):
+        formula = 'AC == BD'
+        self.func, self.params = compile_formula(formula)
+
+    def test_compile_formula_returns_correct_params(self):
+        self.assertEqual(set(self.params), set('BDCA'))
+
+    def test_compile_formula_returns_correct_lambda(self):
+        self.assertTrue(self.func(A=1, C=2, B=1, D=2))
+        self.assertFalse(self.func(A=1, C=2, B=2, D=2))
