@@ -26,4 +26,6 @@ def step_impl(context, text):
     """
     answer = context.answer.decode("utf-8").strip().split('\n')
     text = text.split('\\n')
+    print(answer)
+    print(text)
     assert answer == text
