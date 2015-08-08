@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/lancelote/cs212.svg)](https://travis-ci.org/lancelote/cs212)
+[![Requirements Status](https://requires.io/github/lancelote/cs212/requirements.svg?branch=master)](https://requires.io/github/lancelote/cs212/requirements/?branch=master)
 
 # Design of Computer Programs
 

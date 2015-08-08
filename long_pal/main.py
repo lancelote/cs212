@@ -9,12 +9,11 @@ def longest_subpalindrome_slice(text):
     """
     Return (i, j) such that text[i:j] is the longest palindrome in text.
     """
-    length = len(text)
     max_length = 0
     longest = (0, 0)
     text = text.lower()
 
-    for i in range(length):
+    for i in range(len(text)):
         current_length = 0
         j = 1
 
@@ -22,10 +21,6 @@ def longest_subpalindrome_slice(text):
             while text[i - j] == text[i + j] and i - j >= 0:
                 j += 1
                 current_length += 1
-        except IndexError:
-            pass
-
-        try:
             if text[i] == text[i + 1] and not current_length:
                 current_length = 1
                 longest = (i, i + 2)

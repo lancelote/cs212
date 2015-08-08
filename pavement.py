@@ -53,14 +53,15 @@ def floor():
 
 @task
 def long_pal():
-    # Unit tests
-    sh('py.test --cov-report term-missing --cov long_pal/ test/long_pal/')
-
     # Acceptance tests
     sh('behave test/long_pal/acceptance/features/')
 
+    # Unit tests
+    sh('py.test --cov-report term-missing --cov long_pal/ test/long_pal/')
+
     # Syntax validation
     sh('pylint long_pal/ test/long_pal/')
+
 
 @needs('poker', 'zebra', 'crypt_ar', 'floor', 'long_pal')
 @task
