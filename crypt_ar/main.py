@@ -108,7 +108,7 @@ def arg_parse():  # pragma: no cover
     parser = argparse.ArgumentParser(description="Solve cryptarithmetic puzzle")
     parser.add_argument("task", action="store")
     args = parser.parse_args()
-    task = args.task
+    task = args.task.upper()
     return task
 
 
