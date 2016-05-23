@@ -5,8 +5,8 @@
 Acceptance tests
 """
 
-from behave import when, then
 from subprocess import check_output
+from behave import when, then
 
 
 @when('I run the long_pal program with "{argument}"')

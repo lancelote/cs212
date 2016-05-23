@@ -13,7 +13,7 @@ def longest_subpalindrome_slice(text):
     longest = (0, 0)
     text = text.lower()
 
-    for i in range(len(text)):
+    for i, _ in enumerate(text):
         current_length = 0
         j = 1
 
