@@ -31,10 +31,7 @@ def adjacent(floor_1, floor_2):
     :param floor_2: int
     :return: bool
     """
-    if abs(floor_1 - floor_2) == 1:
-        return True
-    else:
-        return False
+    return abs(floor_1 - floor_2) == 1
 
 
 def floor_puzzle():

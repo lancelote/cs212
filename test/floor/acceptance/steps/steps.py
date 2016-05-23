@@ -5,8 +5,8 @@
 Acceptance tests
 """
 
-from behave import when, then
 import subprocess
+from behave import when, then
 
 
 @when('I run the floor program')
